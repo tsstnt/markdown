@@ -8,12 +8,63 @@
 </head>
 <body>
   <script type="text/javascript">
+  // join(separator): 将数组的元素组起一个字符串，以separator为分隔符，省略的话则用默认用逗号为分隔符，该方法只接收一个参数：即分隔符。
+    const arr = [1,2,3]
     const arr1 = [1,2,3,4,5,6,7,8,9]
-    const arr2 = [23,24,25,26,27,28,29]
-  console.log('>>>>>>>>>>>>>join<<<<<<<<<<<<<')  
+
+  console.log('<<<<<<<<<<<<<--------join-------->>>>>>>>>>>>>')  
   console.log(arr1.join())//1,2,3,4,5,6,7,8,9
   console.log(arr1.join('-'))//1-2-3-4-5-6-7-8-9
-  console.log('--------------join-------------------')  
+
+  console.log('<<<<<<<<<<<<<--------join-------->>>>>>>>>>>>>')  
+  /* 方法衍生
+    str  需要处理的对象,可以是字符串  数字 数组
+  */
+  function repeatString(str,n){
+    return new Array(n+1).join(str)
+  }
+  console.log(repeatString(arr,2))//1,2,31,2,3
+  console.log(repeatString('question',2))//question
+  console.log(repeatString('123-',4))//123-123-123-123-
+
+  console.log('<<<<<<<<<<<<<--------pop-------->>>>>>>>>>>>>') 
+  //pop()：数组末尾移除最后一项，减少数组的 length 值，然后返回移除的项。
+  const arr2 = [1,5,7,9,22,33,44,]
+
+  console.log(arr2.pop())//44
+  console.log(arr2.pop())//33
+  console.log(arr2.pop())//22
+  console.log(arr2.pop())//9
+  console.log(arr2.pop())//7
+
+  console.log('<<<<<<<<<<<<<--------push-------->>>>>>>>>>>>>') 
+  //push(): 可以接收任意数量的参数，把它们逐个添加到数组末尾，并返回修改后数组的  长度。
+  const arr3 = [23,24,25,26,27,28,29]
+
+
+  console.log(arr3.push(1))//8
+  console.log(arr3.push(1))//9
+  console.log(arr3.push(1))//10
+  console.log(arr3.push(1))//11
+
+  console.log('<<<<<<<<<<<<<--------shift-------->>>>>>>>>>>>>') 
+  //shift()：删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined 。
+  const arr4 = [1,3,5,7,9]
+  console.log(arr4.shift())//1
+  console.log(arr4.shift())//3
+  console.log(arr4.shift())//5
+  console.log(arr4.shift())//7
+  console.log(arr4.shift())//9
+  console.log(arr4.shift())//undefined
+  console.log(arr4.shift())//undefined
+
+  console.log('<<<<<<<<<<<<<--------sort-------->>>>>>>>>>>>>') 
+  //sort()：按升序排列数组项——即最小的值位于最前面，最大的值排在最后面。
+  //在排序时，sort()方法会调用每个数组项的 toString()转型方法，然后比较得到的字符串，以确定如何排序。即使数组中的每一项都是数值， sort()方法比较的也是字符串
+  const arr5 = [3,6,1,2,0,9,5]
+  console.log(arr5.sort())//[0, 1, 2, 3, 5, 6, 9]
+  const arr6 = ['1','6','9','3','7']
+  console.log(arr6.sort())// ["1", "3", "6", "7", "9"]
   </script>
 </body>
 </html>
