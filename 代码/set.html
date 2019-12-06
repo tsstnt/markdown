@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script >
+  //   var a = [5, 2, 6, 8, 2, 5, 1, 4]
+  //   var Arr = new Set(a)
+  //   var newArr = [...Arr]
+  //   newArr.sort(function (a, b) {
+  //     return a - b;
+  //   })
+  //   console.log(newArr)
+
+  // var a = 1
+  // var b = {
+  //   a:2,
+  //   c:this.a+10,
+  //   getA:function(){
+  //     console.log(this.a)//2,1
+  //   }
+  // }
+  // setTimeout(b.getA,10)
+  // console.log(b.c)//11
+  // b.getA()
+    function setName(obj){
+      obj.name = 'Ted'
+      obj = new Object()
+      obj.name = 'Marry'
+      console.log(obj)//{name:Marry}
+    }
+    var obj = new Object()
+    obj.name = 'Jen'
+    setName(obj)
+    console.log(obj.name)//Ted
+
+
+  </script>
+</body>
+
+</html>
