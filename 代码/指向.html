@@ -8,7 +8,7 @@
 </head>
 <body>
   <script type="text/javascript">
-    window.color = 'red'
+/*     window.color = 'red'
     var o = {color:'blue'}
     function sayColor(){
       console.log(this.color)
@@ -16,7 +16,15 @@
     sayColor()
     sayColor.call(this)
     sayColor.call(window)
-    sayColor.call(o)
+    sayColor.call(o) */
+
+    var obj ={
+      num:1,
+      fn:() => {
+        console.log(this)
+      }
+    }
+    
   </script>
 </body>
 </html>
