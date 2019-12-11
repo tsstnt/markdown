@@ -8,16 +8,17 @@
 </head>
 <body>
   <script type="text/javascript">
-    // const m1 = new Map([['a', 111], ['b', 222]])
-    // console.log(m1)
-
-    var arr = [2,3,1,1,5,2,4]
-    var newArr = [...(new Set(arr))]
-    function sortNum(a,b){
-      return a - b
-    }
-    var arr1 = newArr.sort(sortNum)
+    // console.log(new Date('2019-12-11'))
+    let dateStr = '今天是2019-12-11'
+    let arr1 = dateStr.replace(/(\d{4})\-(\d{2})\-(\d{2})/, "$1年$2月$3日")
     console.log(arr1)
+
+    
+    let arr = dateStr.split('-')
+    console.log(arr)
+    let newArr = arr[0]+ '年' + arr[1] + '月' + arr[2] + '日'
+    console.log(newArr)
+
   </script>
 </body>
 </html>

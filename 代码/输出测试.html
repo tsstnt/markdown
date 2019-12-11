@@ -8,16 +8,19 @@
 </head>
 <body>
   <script type="text/javascript">
-    // const m1 = new Map([['a', 111], ['b', 222]])
-    // console.log(m1)
-
-    var arr = [2,3,1,1,5,2,4]
-    var newArr = [...(new Set(arr))]
-    function sortNum(a,b){
-      return a - b
+    // function a(){
+    //   alert(this)
+    // } 
+    // a.call(null)
+/*     var a = 1
+    var b = function a(x){
+      x && a(--x)
     }
-    var arr1 = newArr.sort(sortNum)
-    console.log(arr1)
+    alert(a) */
+    if(!('a' in window)){
+      var a = 1
+    }
+    alert(a)
   </script>
 </body>
 </html>

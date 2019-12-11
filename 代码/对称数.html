@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
   <script type="text/javascript">
-    // const m1 = new Map([['a', 111], ['b', 222]])
-    // console.log(m1)
+    function isSymmetryNum(start, end) {
+      for (var i = start; i < end + 1; i++) {
+        var iInversionNumber = +(i.toString().split("").reverse().join(""));
 
-    var arr = [2,3,1,1,5,2,4]
-    var newArr = [...(new Set(arr))]
-    function sortNum(a,b){
-      return a - b
+        if (iInversionNumber === i && i > 10) {
+          console.log(i);
+        }
+
+      }
     }
-    var arr1 = newArr.sort(sortNum)
-    console.log(arr1)
+    isSymmetryNum(1, 1000000);
   </script>
 </body>
+
 </html>

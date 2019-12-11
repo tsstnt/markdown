@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var str = "this IS A TEST";
+
+    // 将所有字符变成小写
+    function changeFirstLetter() {
+      //转换为字符串数组
+      var array = str.toLowerCase().split(" ")
+      console.log(array)
+      for (var i = 0; i < array.length; i++) {
+        //给数组的每一个元素重新赋值,将首字母变为大写
+        array[i] = array[i][0].toUpperCase() + array[i].substring(1, array[i].length)
+        console.log(array[i][0],array[i].substring(array[i].length,1))
+      }
+      var string = array.join(" ")
+      console.log(string)
+      return string
+    }
+    var resultStr = changeFirstLetter(str)
+    console.log(resultStr)
+
+    //使用正则表达式
+    function titleize(str) {
+      //如果只想要括号最原始的功能，但不会引用它，即，既不在 API 里引用，也不在正则里反向引用。
+      //此时可以使用非捕获括号 (?:p) 和 (?:p1|p2|p3)
+      //\s在这表示的是空白符，空格，\w是字母数字=下划线，在这里表示的是字母
+      return str.toLowerCase().replace(/(?:^|\s)\w/g, function (c) {
+        return c.toUpperCase()
+      })
+    }
+    var resultStr2 = titleize(str)
+    console.log(resultStr2)  
+    </script>
+</body>
+
+</html>
