@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1px</title>
+  <style>
+    html{
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+    .b-1px {
+      border-top:1px solid #000;
+    }
+    .border-1px {
+      position: relative;
+    }
+    .border-1px::after{
+      position: absolute;
+      content: '';
+      top: -50%;
+      bottom: -50%;
+      left: -50%;
+      right: -50%;
+      transform: scale(0.5);
+      border-top:1px solid red;
+    }
+    @media (-webkit-min-device-pixel-radio:3),(min-device-pixel-radio:3) {
+      border-1px::after {
+        -webkit-transform: scaleY(0.3);
+        transform: scaleY(0.3);
+      }
+    }
+    @media (-webkit-min-device-pixel-radio:2),(min-device-pixel-radio:2) {
+      border-1px::after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+      }
+    }
+    .text-6px{
+      font-size: 6px;
+      color: #000;
+      transform: scale(0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="border-1px"></div>
+  <div style="height: 10px;"></div>
+  <div class="b-1px"></div>
+  <p class="text-6px">我是6px字体</p>
+</body>
+</html>
